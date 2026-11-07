@@ -1,0 +1,13 @@
+{
+	auto_https off
+	servers {
+		protocols h1 h2 h3
+	}
+}
+
+https://localhost:8443 {
+	tls /home/labuser/cnproj/certs/localhost+1.pem /home/labuser/cnproj/certs/localhost+1-key.pem
+	root * /home/labuser/cnproj/site
+	file_server
+	header Cache-Control no-store
+}
