@@ -1,0 +1,6 @@
+runs = 20, failed = 0
+A. QUIC full handshake      : first byte median  129.9 ms | page complete median  130.7 ms
+B. QUIC resumed (1-RTT)     : first byte median  120.1 ms | page complete median  120.9 ms
+C. QUIC 0-RTT               : first byte median   67.5 ms | page complete median   68.5 ms
+0-RTT accepted by server in 20/20 runs
+0-RTT gain vs full handshake (median page complete): 62.3 ms

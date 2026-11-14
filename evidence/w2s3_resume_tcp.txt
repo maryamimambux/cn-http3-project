@@ -1,0 +1,6 @@
+Full handshake    : 109.5 ms  reused=False
+Resumed handshake : 199.2 ms  reused=True
+Resumed handshake : 112.4 ms  reused=True
+Resumed handshake : 127.5 ms  reused=True
+Resumed handshake : 110.4 ms  reused=True
+Resumed handshake : 132.0 ms  reused=True
