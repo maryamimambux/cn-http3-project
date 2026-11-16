@@ -1,0 +1,5 @@
+loss_%,n_h2,n_h3,h2_median,h3_median,diff_h2_minus_h3,CI95_low,CI95_high,verdict
+0,50,50,1202,762,441,248,672,h3 faster (reliable)
+1,50,50,6077,5269,809,-868,3801,no clear difference
+2,50,50,12049,8182,3868,2982,5466,h3 faster (reliable)
+5,20,20,29878,15269,14609,11159,16614,h3 faster (reliable)

@@ -1,0 +1,43 @@
+rows: main 160 | extra 180 | total 340
+rows with wrong protocol (removed): 0
+
+1) Do the two batches agree? Median page load (ms) per batch:
+batch         extra     main
+loss proto                  
+0    h2      1380.0   1150.0
+     h3       810.0    730.0
+1    h2      6005.0   6231.0
+     h3      3677.0   6182.0
+2    h2     12183.0  12000.0
+     h3      7746.0   9577.0
+5    h2         NaN  29878.0
+     h3         NaN  15269.0
+
+2) Combined summary:
+             n  connect_med  ttfb_req_med  ttfb_nav_med  load_med  load_q25  load_q75
+loss proto                                                                           
+0    h2     50        133.2          65.8         205.6    1202.4     934.1    1609.1
+     h3     50         72.2          63.3         148.8     761.7     705.4     935.6
+1    h2     50        125.0          62.2         199.6    6077.4    2499.0    8758.8
+     h3     50         69.4          62.2         144.4    5268.7    1818.8    6754.2
+2    h2     50        127.2          63.4         202.0   12049.4   10212.2   14453.9
+     h3     50         68.1          64.2         143.9    8181.6    5958.7    9660.2
+5    h2     20        129.4          66.8         251.0   29878.0   26184.1   31828.4
+     h3     20         65.1          56.6         134.4   15269.1   13715.5   16124.2
+
+3) Is the difference reliable? (page load, bootstrap 95% CI of median h2 minus h3, ms)
+ loss_%  n_h2  n_h3  h2_median  h3_median  diff_h2_minus_h3  CI95_low  CI95_high              verdict
+      0    50    50       1202        762               441       248        672 h3 faster (reliable)
+      1    50    50       6077       5269               809      -868       3801  no clear difference
+      2    50    50      12049       8182              3868      2982       5466 h3 faster (reliable)
+      5    20    20      29878      15269             14609     11159      16614 h3 faster (reliable)
+
+4) In how many paired runs was h3 faster?
+      h3_faster_runs  paired_runs
+loss                             
+0                 39           50
+1                 36           50
+2                 39           50
+5                 20           20
+
+saved: summary_combined.csv reliability.csv load_vs_loss_combined.png ttfb_nav_vs_loss_combined.png load_boxplot_combined.png

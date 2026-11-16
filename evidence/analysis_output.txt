@@ -26,3 +26,6 @@ loss
 5                 20           20
 
 graphs saved: load_vs_loss.png ttfb_nav_vs_loss.png ttfb_req_vs_loss.png connect_vs_loss.png load_boxplot.png
+
+
+

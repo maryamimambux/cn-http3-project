@@ -3,9 +3,17 @@ from playwright.sync_api import sync_playwright
 
 URL = 'https://localhost:8443/'
 ONE_WAY_DELAY_MS = 25
-LOSS_LEVELS = [0, 1, 2, 5]
+
+LOSS_LEVELS = [0, 1, 2]
+RUNS = 30
+OUT = 'results_extra.csv'
+
+# commented -- while doing more runs for 1% and 2%
+# (it runs by itself, about 20 to 25 minutes)
+""" LOSS_LEVELS = [0, 1, 2, 5]
 RUNS = 20   # 2 = quick test, change to 20 for the real run
-OUT = 'results_test.csv' if RUNS < 5 else 'results.csv'
+OUT = 'results_test.csv' if RUNS < 5 else 'results.csv' """
+
 JS = 'JSON.stringify(performance.getEntriesByType("navigation")[0])'
 
 CERT = os.path.expanduser('~/cnproj/certs/localhost+1.pem')
