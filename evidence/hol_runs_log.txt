@@ -1,0 +1,50 @@
+loss 2 h2 run 0 images 30 last 15718 ms | longest pause 6950 ms
+loss 2 h3 run 0 images 30 last 12682 ms | longest pause 3568 ms
+loss 2 h2 run 1 images 30 last 16144 ms | longest pause 10996 ms
+loss 2 h3 run 1 images 30 last 7363 ms | longest pause 1735 ms
+loss 2 h2 run 2 images 30 last 11761 ms | longest pause 7969 ms
+loss 2 h3 run 2 images 30 last 1190 ms | longest pause 101 ms
+loss 2 h2 run 3 images 30 last 14312 ms | longest pause 2582 ms
+loss 2 h3 run 3 images 30 last 8472 ms | longest pause 1804 ms
+loss 2 h2 run 4 images 30 last 12326 ms | longest pause 4633 ms
+loss 2 h3 run 4 images 30 last 9161 ms | longest pause 1817 ms
+loss 2 h2 run 5 images 30 last 20289 ms | longest pause 16954 ms
+loss 2 h3 run 5 images 30 last 13153 ms | longest pause 1252 ms
+loss 2 h2 run 6 images 30 last 12654 ms | longest pause 3806 ms
+loss 2 h3 run 6 images 30 last 10717 ms | longest pause 1306 ms
+loss 2 h2 run 7 images 30 last 8693 ms | longest pause 2943 ms
+loss 2 h3 run 7 images 30 last 7994 ms | longest pause 1126 ms
+loss 2 h2 run 8 images 30 last 17078 ms | longest pause 8079 ms
+loss 2 h3 run 8 images 30 last 8856 ms | longest pause 1413 ms
+loss 2 h2 run 9 images 30 last 20759 ms | longest pause 7486 ms
+loss 2 h3 run 9 images 30 last 11433 ms | longest pause 1471 ms
+loss 5 h2 run 0 images 30 last 37525 ms | longest pause 14419 ms
+loss 5 h3 run 0 images 30 last 20649 ms | longest pause 2639 ms
+loss 5 h2 run 1 images 30 last 30595 ms | longest pause 20272 ms
+loss 5 h3 run 1 images 30 last 15531 ms | longest pause 2090 ms
+loss 5 h2 run 2 images 30 last 33758 ms | longest pause 7659 ms
+loss 5 h3 run 2 images 30 last 16318 ms | longest pause 1116 ms
+loss 5 h2 run 3 images 30 last 29743 ms | longest pause 24448 ms
+loss 5 h3 run 3 images 30 last 16689 ms | longest pause 2428 ms
+loss 5 h2 run 4 images 30 last 32480 ms | longest pause 21084 ms
+loss 5 h3 run 4 images 30 last 22049 ms | longest pause 2000 ms
+loss 5 h2 run 5 images 30 last 29101 ms | longest pause 8085 ms
+loss 5 h3 run 5 images 30 last 16104 ms | longest pause 2747 ms
+loss 5 h2 run 6 images 30 last 26674 ms | longest pause 8516 ms
+loss 5 h3 run 6 images 30 last 13434 ms | longest pause 1474 ms
+loss 5 h2 run 7 images 30 last 28757 ms | longest pause 16451 ms
+loss 5 h3 run 7 images 30 last 15326 ms | longest pause 3733 ms
+loss 5 h2 run 8 images 30 last 25909 ms | longest pause 22824 ms
+loss 5 h3 run 8 images 30 last 14941 ms | longest pause 2189 ms
+loss 5 h2 run 9 images 30 last 31284 ms | longest pause 20357 ms
+loss 5 h3 run 9 images 30 last 12376 ms | longest pause 1884 ms
+netem removed
+
+Medians per loss level and protocol:
+            first_ms  last_ms  longest_gap_ms  gaps_over_1s
+loss proto                                                 
+2    h2       5056.0  15015.0          7218.0           1.0
+     h3       6772.0   9008.0          1442.0           1.0
+5    h2      11598.0  30169.0         18362.0           2.0
+     h3      12862.0  15818.0          2140.0           1.0
+saved hol_metrics.csv hol_raw.json hol_steps.png hol_longest_gap.png
