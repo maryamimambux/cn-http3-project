@@ -1,0 +1,20 @@
+level proto  n  configured  real_loss_pct  load_median_s  load_mean_s  load_std_s  ttfb_nav_median_ms  connect_median_ms
+ 2pct    h2 20        2.00           1.28          11.88        10.58        3.55                 168                109
+ 2pct    h3 20        3.25           1.33           8.65         8.16        1.38                 117                 61
+ 5pct    h2 20        5.00           3.47          21.85        22.00        3.74                 209                108
+ 5pct    h3 20        8.20           3.72          14.75        14.91        1.32                 180                 89
+
+level  pairs  h3_faster  improvement_pct  wilcoxon_p
+ 2pct     20         15             27.2     0.01208
+ 5pct     20         20             32.5     0.00000
+
+loss        measure  h2_median  h3_median h3_smaller_pairs  wilcoxon_p
+   2          first       1.59       5.67             4/20     0.00102
+   2           last      10.79       7.42            15/20     0.04844
+   2    gap_between       4.83       1.34            18/20     0.00004
+   2 gap_with_start       5.89       5.67            11/20     0.67422
+   5          first       8.18      11.11             4/20     0.00558
+   5           last      23.47      14.90            20/20     0.00000
+   5    gap_between      14.31       2.52            19/20     0.00000
+   5 gap_with_start      15.86      11.11            15/20     0.00315
+saved

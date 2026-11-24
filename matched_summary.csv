@@ -1,0 +1,5 @@
+level,proto,n,configured,real_loss_pct,load_median_s,load_mean_s,load_std_s,ttfb_nav_median_ms,connect_median_ms
+2pct,h2,20,2.0,1.28,11.88,10.58,3.55,168,109
+2pct,h3,20,3.25,1.33,8.65,8.16,1.38,117,61
+5pct,h2,20,5.0,3.47,21.85,22.0,3.74,209,108
+5pct,h3,20,8.2,3.72,14.75,14.91,1.32,180,89
