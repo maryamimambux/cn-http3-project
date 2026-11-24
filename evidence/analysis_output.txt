@@ -1,0 +1,28 @@
+rows: 240
+rows with wrong protocol (removed): 0
+
+             n  connect_med  ttfb_req_med  ttfb_nav_med  load_med  load_mean  load_std  load_q25  load_q75
+loss proto                                                                                                
+0    h2     30        114.6          53.5         173.6     795.8      902.2     425.9     742.2     833.5
+     h3     30         65.7          53.6         125.9     623.0      690.8     187.3     606.2     646.0
+1    h2     30        116.9          54.8         180.0    5856.7     4845.2    3152.8    1143.2    7445.8
+     h3     30         66.8          54.2         127.4    3402.6     3222.3    1559.6    1965.6    4354.9
+2    h2     30        117.6          54.5         188.3    9856.4     9552.6    3312.9    8221.0   11525.3
+     h3     30         64.8          54.6         125.0    5582.0     5215.9    1755.5    4564.8    6190.9
+5    h2     30        117.0          54.4         211.6   24217.8    23459.1    2604.2   21425.6   25098.0
+     h3     30         67.4          54.0         132.3   10124.6    10212.1    1431.5    9238.6   11352.8
+
+ loss_%  ttfb_nav_h2  ttfb_nav_h3  ttfb_nav_h3_faster_%  load_h2  load_h3  load_h3_faster_%
+      0        173.6        125.9                  27.5    795.8    623.0              21.7
+      1        180.0        127.4                  29.2   5856.7   3402.6              41.9
+      2        188.3        125.0                  33.6   9856.4   5582.0              43.4
+      5        211.6        132.3                  37.5  24217.8  10124.6              58.2
+
+      h3_faster_runs  paired_runs
+loss                             
+0                 26           30
+1                 18           30
+2                 26           30
+5                 30           30
+
+graphs saved: load_vs_loss.png ttfb_nav_vs_loss.png ttfb_req_vs_loss.png connect_vs_loss.png load_boxplot.png
