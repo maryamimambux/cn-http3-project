@@ -4,9 +4,9 @@ from playwright.sync_api import sync_playwright
 URL = 'https://localhost:8443/'
 ONE_WAY_DELAY_MS = 25
 
-LOSS_LEVELS = [0, 1, 2]
+LOSS_LEVELS = [0, 1, 2, 5]
 RUNS = 30
-OUT = 'results_extra.csv'
+OUT = 'results.csv'
 
 # commented -- while doing more runs for 1% and 2%
 # (it runs by itself, about 20 to 25 minutes)

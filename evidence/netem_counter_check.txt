@@ -1,0 +1,86 @@
++ cd /home/maryam/cnproj
++ source venv/bin/activate
+++ deactivate nondestructive
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ '[' -n '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ case "$(uname)" in
++++ uname
+++ export VIRTUAL_ENV=/home/maryam/cnproj/venv
+++ VIRTUAL_ENV=/home/maryam/cnproj/venv
+++ _OLD_VIRTUAL_PATH='/home/maryam/cnproj/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_3.0.1.0_x64__8wekyb3d8bbwe:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/WSL/:/mnt/c/Users/Talha pc/AppData/Local/Microsoft/WindowsApps:/snap/bin'
+++ PATH='/home/maryam/cnproj/venv/bin:/home/maryam/cnproj/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_3.0.1.0_x64__8wekyb3d8bbwe:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/WSL/:/mnt/c/Users/Talha pc/AppData/Local/Microsoft/WindowsApps:/snap/bin'
+++ export PATH
+++ VIRTUAL_ENV_PROMPT=venv
+++ export VIRTUAL_ENV_PROMPT
+++ '[' -n '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='(venv) '
+++ export PS1
+++ hash -r
++ sudo ip link set dev lo mtu 1500
++ for L in 2 5
++ for P in h2 h3
++ sudo tc qdisc del dev lo root
++ sudo tc qdisc add dev lo root netem delay 25ms loss 2% limit 100000
++ for i in 1 2 3
++ python verify.py h2
++ for i in 1 2 3
++ python verify.py h2
++ for i in 1 2 3
++ python verify.py h2
++ echo '== h2, 3 loads at 2% =='
+== h2, 3 loads at 2% ==
++ tc -s qdisc show dev lo
++ awk '/Sent/ {gsub(/[(),]/," "); print "sent=" $4, "dropped=" $7, "loss%=" $7/($4+$7)*100}'
+sent=9339 dropped=104 loss%=1.10134
++ for P in h2 h3
++ sudo tc qdisc del dev lo root
++ sudo tc qdisc add dev lo root netem delay 25ms loss 2% limit 100000
++ for i in 1 2 3
++ python verify.py h3
++ for i in 1 2 3
++ python verify.py h3
++ for i in 1 2 3
++ python verify.py h3
++ echo '== h3, 3 loads at 2% =='
+== h3, 3 loads at 2% ==
++ tc -s qdisc show dev lo
++ awk '/Sent/ {gsub(/[(),]/," "); print "sent=" $4, "dropped=" $7, "loss%=" $7/($4+$7)*100}'
+sent=9354 dropped=74 loss%=0.784896
++ for L in 2 5
++ for P in h2 h3
++ sudo tc qdisc del dev lo root
++ sudo tc qdisc add dev lo root netem delay 25ms loss 5% limit 100000
++ for i in 1 2 3
++ python verify.py h2
++ for i in 1 2 3
++ python verify.py h2
++ for i in 1 2 3
++ python verify.py h2
++ echo '== h2, 3 loads at 5% =='
+== h2, 3 loads at 5% ==
++ tc -s qdisc show dev lo
++ awk '/Sent/ {gsub(/[(),]/," "); print "sent=" $4, "dropped=" $7, "loss%=" $7/($4+$7)*100}'
+sent=10593 dropped=413 loss%=3.7525
++ for P in h2 h3
++ sudo tc qdisc del dev lo root
++ sudo tc qdisc add dev lo root netem delay 25ms loss 5% limit 100000
++ for i in 1 2 3
++ python verify.py h3
++ for i in 1 2 3
++ python verify.py h3
++ for i in 1 2 3
++ python verify.py h3
++ echo '== h3, 3 loads at 5% =='
+== h3, 3 loads at 5% ==
++ tc -s qdisc show dev lo
++ awk '/Sent/ {gsub(/[(),]/," "); print "sent=" $4, "dropped=" $7, "loss%=" $7/($4+$7)*100}'
+sent=9612 dropped=179 loss%=1.82821
++ sudo tc qdisc del dev lo root
++ sudo ip link set dev lo mtu 65536

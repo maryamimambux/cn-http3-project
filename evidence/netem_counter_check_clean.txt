@@ -1,0 +1,8 @@
+== h2, 3 loads at 2% ==
+sent=9339 dropped=104 loss%=1.10134
+== h3, 3 loads at 2% ==
+sent=9354 dropped=74 loss%=0.784896
+== h2, 3 loads at 5% ==
+sent=10593 dropped=413 loss%=3.7525
+== h3, 3 loads at 5% ==
+sent=9612 dropped=179 loss%=1.82821

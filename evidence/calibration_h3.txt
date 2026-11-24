@@ -1,0 +1,16 @@
+== h3, 4 loads, configured 2.5% ==
+sent=12573 dropped=121 loss%=0.953206
+== h3, 4 loads, configured 3% ==
+sent=12641 dropped=139 loss%=1.08764
+== h3, 4 loads, configured 3.5% ==
+sent=12717 dropped=175 loss%=1.35743
+== h3, 4 loads, configured 4% ==
+sent=12758 dropped=229 loss%=1.7633
+== h3, 4 loads, configured 7% ==
+sent=13067 dropped=382 loss%=2.84036
+== h3, 4 loads, configured 8% ==
+sent=13207 dropped=446 loss%=3.26668
+== h3, 4 loads, configured 9% ==
+sent=13357 dropped=585 loss%=4.19595
+== h3, 4 loads, configured 10% ==
+sent=13294 dropped=598 loss%=4.30464
