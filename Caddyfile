@@ -6,8 +6,8 @@
 }
 
 https://localhost:8443 {
-	tls /home/labuser/cnproj/certs/localhost+1.pem /home/labuser/cnproj/certs/localhost+1-key.pem
-	root * /home/labuser/cnproj/site
+	tls /home/maryam/cnproj/certs/localhost+1.pem /home/maryam/cnproj/certs/localhost+1-key.pem
+	root * /home/maryam/cnproj/site
 	file_server
 	header Cache-Control no-store
 }

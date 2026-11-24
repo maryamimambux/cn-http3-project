@@ -4,3 +4,7 @@ site/img/
 keys.log
 *.pcap
 __pycache__/
+venv/
+certs/
+keys.log
+__pycache__/

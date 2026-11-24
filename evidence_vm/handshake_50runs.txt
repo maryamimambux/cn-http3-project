@@ -1,0 +1,6 @@
+runs = 50
+TCP handshake         : mean   65.0 | median   58.4 | std  25.9 ms
+TLS 1.3 handshake     : mean   82.2 | median   73.2 | std  28.6 ms
+TCP + TLS total       : mean  147.1 | median  135.3 | std  42.0 ms
+QUIC (incl. TLS 1.3)  : mean   86.2 | median   81.1 | std  19.6 ms
+gap (TCP+TLS minus QUIC), median: 54.2 ms
