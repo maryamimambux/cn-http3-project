@@ -1,0 +1,8 @@
+== h2, 8 loads, configured 2% ==
+sent=24889 dropped=288 loss%=1.1439
+== h3, 8 loads, configured 3.25% ==
+sent=25309 dropped=315 loss%=1.22932
+== h2, 8 loads, configured 5% ==
+sent=27382 dropped=991 loss%=3.49276
+== h3, 8 loads, configured 8.5% ==
+sent=26385 dropped=1065 loss%=3.87978
